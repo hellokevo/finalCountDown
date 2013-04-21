@@ -356,7 +356,7 @@ function custom_gallery_shortcode($attr) {
 		'icontag'    => 'dt',
 		'captiontag' => 'dd',
 		'columns'    => 3,
-		'size'       => 'full',
+		'size'       => 'thumb',
 		'include'    => '',
 		'exclude'    => ''
 	), $attr));

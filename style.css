@@ -16,6 +16,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /* =Structure
 -------------------------------------------------------------- */
 
+#wrapper {
+    width: 900px;
+    margin: 0 auto;
+}
 #page {
 	display: block;
 	margin: 1em;
@@ -148,6 +152,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /* =Content
 -------------------------------------------------------------- */
 
+#galleria{ 
+	width: 700px; 
+	height: 400px; 
+	background: #000 
+}
 .sticky {
 }
 .entry-meta {

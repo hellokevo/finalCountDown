@@ -59,12 +59,16 @@
 <!-- include Cycle plugin -->
 <script src="<?php bloginfo( 'template_url' ); ?>/js/jquery.cycle.all.js" type="text/javascript" charset="utf-8"> </script>
 <script type="text/javascript">$(document).ready(function(){$('.slideshow').cycle({fx:'fade'});});</script>
+<script src="<?php bloginfo( 'template_url' ); ?>/js/galleria-1.2.9.js" type="text/javascript" charset="utf-8"> </script>
 
 
 
 </head>
 
 <body <?php body_class(); ?>>
+	 
+	 <div id="wrapper">
+
 <div id="page" class="hfeed">
 <?php do_action( 'before' ); ?>
 	<header id="branding" role="banner">
