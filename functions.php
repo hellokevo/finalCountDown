@@ -435,5 +435,8 @@ function custom_gallery_shortcode($attr) {
 	return $output;
 }
 
+/**
+ * Add support to thumbnails
+ */
 
-
+add_theme_support( 'post-thumbnails' ); 

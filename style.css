@@ -1,3 +1,5 @@
+/* @override http://finalcountdown:8888/wp-content/themes/finalCountDown/style.css */
+
 /*
 Theme Name: Final Count Down
 Theme URI: www.hellokevo.com
@@ -282,12 +284,36 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	padding-top: 0;
 }
 
+#content div.blog_post {
+height: 157px;
+width: 587px;
+	
+}
 
+#content div.blog_post h2 a {
+	display: block;
+	position: static;
+	margin-left: 165px;
+	text-transform: uppercase;
+	font: bold 18px "Lucida Grande", Lucida, Verdana, sans-serif;
+	text-decoration: none;
+	color: #000000;
+}
+
+#content div.blog_post p {
+	margin-left: 165px;
+	margin-top: -10px;
+	font: 12px "Lucida Grande", Lucida, Verdana, sans-serif;
+}
 /* =Images
 -------------------------------------------------------------- */
 
 a img {
+
 	border: none;
+	position: absolute;
+	float: left;
+	display: block;
 }
 p img {
 	margin-bottom: 0.5em; /* a small bottom margin prevents content floating under images */
@@ -398,3 +424,4 @@ article.comment {
 #colophon {
 	padding: 1em 0 0;
 }
+

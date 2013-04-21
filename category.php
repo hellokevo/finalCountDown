@@ -7,7 +7,7 @@
  */
 
 get_header(); ?>
-
+	<h1> hi </h1>
 		<section id="primary">
 			<div id="content" role="main">
 

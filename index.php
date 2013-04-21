@@ -14,6 +14,8 @@
 
 get_header(); ?>
 
+	<h2>index.php</h2>
+
 		<div id="primary">
 			<div id="content" role="main">
 
@@ -24,13 +26,25 @@ get_header(); ?>
 				<?php /* Start the Loop */ ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 
-					<?php
-						/* Include the Post-Format-specific template for the content.
-						 * If you want to overload this in a child theme then include a file
-						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-						 */
-						get_template_part( 'content', get_post_format() );
-					?>
+				<!-- Post thumbnail -->
+			<div class="blog_post">
+				<?php if ( has_post_thumbnail()) : ?>
+					 <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
+					 <?php the_post_thumbnail(thumbnail); ?>
+					</a>
+					<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+			
+			<!-- EXCERPT -->
+			<?php the_excerpt(); 
+			
+			?>
+
+
+
+				<?php endif; ?>
+			</div>
+
+
 
 				<?php endwhile; ?>
 
