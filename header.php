@@ -53,6 +53,15 @@
 <![endif]-->
 
 <?php wp_head(); ?>
+
+<!-- include jQuery library -->
+<script src="<?php bloginfo( 'template_url' ); ?>/js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"> </script>
+<!-- include Cycle plugin -->
+<script src="<?php bloginfo( 'template_url' ); ?>/js/jquery.cycle.all.js" type="text/javascript" charset="utf-8"> </script>
+<script type="text/javascript">$(document).ready(function(){$('.slideshow').cycle({fx:'fade'});});</script>
+
+
+
 </head>
 
 <body <?php body_class(); ?>>
