@@ -61,7 +61,51 @@
 <script type="text/javascript">$(document).ready(function(){$('.slideshow').cycle({fx:'fade'});});</script>
 <script src="<?php bloginfo( 'template_url' ); ?>/js/galleria-1.2.9.js" type="text/javascript" charset="utf-8"> </script>
 
+<script> jQuery(document).ready(function($) {
+ //STICKY NAV
+ var isMobile = {
+ Android: function() {
+ return navigator.userAgent.match(/Android/i) ? true : false;
+ },
+ BlackBerry: function() {
+ return navigator.userAgent.match(/BlackBerry/i) ? true : false;
+ },
+ iOS: function() {
+ return navigator.userAgent.match(/iPhone|iPad|iPod/i) ? true : false;
+ },
+ Windows: function() {
+ return navigator.userAgent.match(/IEMobile/i) ? true : false;
+ },
+ any: function() {
+ return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Windows());
+ }
+ };
+//Calculate the height of <header>
+ //Use outerHeight() instead of height() if have padding
+ var aboveHeight = $('.top-row').outerHeight();
 
+ //when scroll
+ $(window).scroll(function(){
+
+ //if scrolled down more than the header’s height but this isn't mobile
+ if ($(window).scrollTop() > aboveHeight && !isMobile.any()){
+
+ // if yes, add “fixed” class to the <nav>
+ // add padding top to the #content 
+ // (value is same as the height of the nav)
+ $('.block-type-navigation').addClass('fixed').css('top','0').next()
+ .css('padding-top','42px');
+
+ } else {
+
+ // when scroll up or less than aboveHeight,
+ // remove the “fixed” class, and the padding-top
+ $('.block-type-navigation').removeClass('fixed').next()
+ .css('padding-top','0');
+ }
+ });
+});
+</script>
 
 </head>
 
@@ -77,7 +121,7 @@
 			<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
 		</hgroup>
 
-		<nav id="access" role="navigation">
+		<nav class= "fixed block-content" id="access" role="navigation">
 			<h1 class="assistive-text section-heading"><?php _e( 'Main menu', 'toolbox' ); ?></h1>
 			<div class="skip-link screen-reader-text"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'toolbox' ); ?>"><?php _e( 'Skip to content', 'toolbox' ); ?></a></div>
 

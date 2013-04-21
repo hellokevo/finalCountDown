@@ -22,7 +22,9 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-
+<?php
+wp_enqueue_script('jquery-ui', '//ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js', false, false, true);
+?>
 </div><!-- wrapper -->
 </body>
 </html>

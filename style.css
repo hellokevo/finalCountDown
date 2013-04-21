@@ -96,7 +96,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 -------------------------------------------------------------- */
 
 #access {
-	background: #eee;
+	background: #000;
 	display: block;
 	float: left;
 	margin: 0 auto 1em;
@@ -113,9 +113,12 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 #access a {
 	display: block;
-	line-height: 2em;
-	padding: 0 1em;
+	padding: 0 2em;
 	text-decoration: none;
+	color: #ffffff;
+	font: 12px/29px "Lucida Grande", Lucida, Verdana, sans-serif;
+	background-position: 0;
+	height: 30px;
 }
 #access ul ul {
 	box-shadow: 0 3px 3px rgba(0,0,0,0.2);
@@ -142,9 +145,12 @@ Use it to make something cool, have fun, and share what you've learned with othe
 #access li:hover > a,
 #access ul ul :hover > a {
 	background: #dedede;
+	color: #ffffff;
 }
 #access ul ul a:hover {
 	background: #cecece;
+	text-decoration: none;
+	color: #ffffff;
 }
 #access ul li:hover > ul {
 	display: block;
@@ -290,6 +296,33 @@ width: 587px;
 	
 }
 
+#wp-calendar caption {
+	text-transform: uppercase;
+	background-color: #000000;
+	color: #ffffff;
+	font: 12px/30px "Lucida Grande", Lucida, Verdana, sans-serif;
+	height: px;
+}
+
+#wp-calendar thead tr th {
+	font: bold 12px/34px "Lucida Grande", Lucida, Verdana, sans-serif;
+	text-align: left;
+}
+
+
+
+#wp-calendar tbody tr td {
+	font: 16px "Lucida Grande", Lucida, Verdana, sans-serif;
+	text-align: left;
+	margin-top: 30px;
+/**/
+	opacity: 0.48;
+}
+
+#calendar_wrap {
+	margin-top: 25px;
+}
+
 #content div.blog_post h2 a {
 	display: block;
 	position: static;
@@ -364,6 +397,7 @@ img.alignright {
 }
 #searchform input#s {
 	width: 60%;
+	height: 25px;
 }
 input[type=text],
 input#s {
@@ -415,6 +449,24 @@ article.comment {
 }
 .widget-area .widget_search input {
 	float: left;
+}
+
+#searchsubmit {
+	background-color: #000000;
+	color: #ffffff;
+	text-transform: uppercase;
+	font-size: 10px;
+	text-align: center;
+	height:  32px;
+}
+
+div#site-generator {
+	text-decoration: none;
+	color: #000000;
+	text-transform: uppercase;
+	font: 10px "Lucida Grande", Lucida, Verdana, sans-serif;
+	margin-top: 40px;
+	margin-bottom: 60px;
 }
 
 
